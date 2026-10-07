@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Latihan Reported Speech – Step Up Kelas XI Tingkat Lanjut</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f5fb;--surface:#ffffff;--ink:#1d1a3b;--muted:#5d5a7a;--line:#dedbef;
+  --accent:#4c35c8;--accent-ink:#ffffff;--good:#0c7a63;--goodbg:#dff5ee;
+  --bad:#8f4300;--badbg:#fff0dc;--bubble:#ece8ff;--soft:#f0eefa;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#13112a;--surface:#1c1a38;--ink:#ecebfa;--muted:#a9a6c8;--line:#34305a;
+    --accent:#a79aff;--accent-ink:#13112a;--good:#5fd4b6;--goodbg:#143a33;
+    --bad:#ffb866;--badbg:#3d2a10;--bubble:#2a2652;--soft:#242148;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#13112a;--surface:#1c1a38;--ink:#ecebfa;--muted:#a9a6c8;--line:#34305a;
+  --accent:#a79aff;--accent-ink:#13112a;--good:#5fd4b6;--goodbg:#143a33;
+  --bad:#ffb866;--badbg:#3d2a10;--bubble:#2a2652;--soft:#242148;
+}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding:20px 16px 64px}
+h1,h2,h3{line-height:1.25;margin:0}
+h1{font-size:clamp(1.7rem,5.5vw,2.3rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:1.3rem;font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
+h3{font-size:1.02rem;font-weight:700;margin:22px 0 8px}
+p{margin:0 0 12px}
+.sub{color:var(--muted);margin:6px 0 0;font-size:.95rem}
+.serif{font-family:var(--serif)}
+header{padding:8px 0 14px}
+.overall{display:flex;align-items:center;gap:12px;margin-top:14px}
+.bar{flex:1;height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar>i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+.overall b{font-size:.9rem;white-space:nowrap}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:600 .88rem var(--sans);padding:9px 14px;border-radius:99px;cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.tab small{opacity:.8;font-weight:600;margin-left:4px}
+button:focus-visible,textarea:focus-visible,summary:focus-visible,.opt:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.panel[hidden]{display:none}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;margin:12px 0}
+.box.tip{background:var(--soft);border-style:dashed}
+.box h3:first-child{margin-top:0}
+.formula{font-family:var(--serif);background:var(--bubble);border-radius:8px;padding:10px 12px;margin:8px 0;font-size:1.02rem}
+.formula b{color:var(--accent)}
+ol.steps{padding-left:22px;margin:8px 0}
+ol.steps li{margin-bottom:8px}
+.pair{margin:10px 0}
+.pair div{padding:8px 12px;border-radius:8px;font-family:var(--serif)}
+.pair .d{background:var(--bubble);border-bottom-left-radius:2px}
+.pair .r{border-left:4px solid var(--accent);margin-top:6px;background:var(--surface)}
+.pair small{display:block;font-family:var(--sans);color:var(--muted);font-weight:600;font-size:.76rem}
+.tablewrap{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:420px;font-size:.93rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--soft);font-weight:700}
+tr:last-child td{border-bottom:0}
+td.s{font-family:var(--serif)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 4px;align-items:center}
+.chip{font-size:.85rem;font-weight:700;background:var(--soft);border-radius:99px;padding:4px 12px}
+/* Soal */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 12px;margin:14px 0}
+.q.ok{border-color:var(--good)}
+.qn{font-size:.8rem;font-weight:700;color:var(--muted);margin-bottom:6px}
+.bubble{position:relative;background:var(--bubble);border-radius:14px 14px 14px 3px;padding:11px 14px;font-family:var(--serif);font-size:1.05rem}
+.lbl{display:block;font-size:.84rem;font-weight:600;color:var(--muted);margin:12px 0 5px}
+textarea{width:100%;min-height:62px;resize:vertical;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--bg);color:var(--ink);font:1.02rem/1.45 var(--serif)}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{font:700 .88rem var(--sans);border-radius:9px;border:1.5px solid var(--accent);padding:9px 14px;cursor:pointer;background:transparent;color:var(--accent);min-height:40px}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{border-color:var(--line);color:var(--muted)}
+.res{margin-top:10px;font-size:.95rem}
+.res .msg{border-radius:9px;padding:10px 12px}
+.res .good{background:var(--goodbg);color:var(--good)}
+.res .warn{background:var(--badbg);color:var(--bad)}
+.key{margin-top:8px;border-left:4px solid var(--good);padding:6px 12px;font-family:var(--serif);background:var(--surface)}
+.key small{display:block;font-family:var(--sans);color:var(--muted);font-weight:600;font-size:.78rem;margin-top:4px}
+.hint{margin-top:8px;font-size:.92rem;background:var(--soft);padding:9px 12px;border-radius:9px}
+details.keys{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px 14px;margin:20px 0 8px}
+details.keys summary{cursor:pointer;font-weight:700;padding:10px 0}
+details.keys ol{padding-left:22px;margin:4px 0 12px}
+details.keys li{margin-bottom:10px;font-family:var(--serif)}
+details.keys li span{display:block;font-family:var(--sans);font-size:.84rem;color:var(--muted)}
+/* MCQ */
+.mcq{margin:14px 0}
+.mcq p{font-family:var(--serif);font-weight:600;margin-bottom:8px}
+.opt{display:block;width:100%;text-align:left;font:1rem var(--serif);padding:10px 12px;margin-bottom:6px;border:1.5px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);cursor:pointer}
+.opt.right{border-color:var(--good);background:var(--goodbg)}
+.opt.wrong{border-color:var(--bad);background:var(--badbg)}
+.mcq .why{font-size:.9rem;color:var(--muted);margin-top:4px}
+.err td:first-child{color:var(--bad)}
+.err td:last-child{color:var(--good);font-weight:600}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Reported Speech</h1>
+  <p class="sub">Step Up SMA/MA Kelas XI Tingkat Lanjut · Chapter 3 Fantasy · hal. 94–100</p>
+  <div class="overall" aria-label="Progres keseluruhan">
+    <div class="bar"><i id="barFill"></i></div>
+    <b id="barTxt">0 / 30 benar</b>
+  </div>
+</header>
+
+<nav><div class="tabs" role="tablist" id="tabs"></div></nav>
+
+<!-- ============ PANEL 0 ============ -->
+<section class="panel" id="p0" role="tabpanel">
+  <h2>Mulai di sini</h2>
+  <p>Reported speech (kalimat tidak langsung) dipakai untuk menceritakan ulang apa yang dikatakan orang lain, tanpa mengutip kata-katanya persis. Makna sama, bentuk berbeda.</p>
+  <div class="pair">
+    <div class="d"><small>Direct speech</small>Then, he said, “Catch the fish.”</div>
+    <div class="r"><small>Reported speech</small>Then, he asked me to catch the fish.</div>
+  </div>
+
+  <div class="box">
+    <h3>Cara berpikir 4 langkah</h3>
+    <ol class="steps">
+      <li><b>Kenali jenisnya.</b> Tidak ada subjek (<i>Call me…</i>, <i>Don’t…</i>)? Itu perintah/permintaan. Ada subjek dan titik? Pernyataan. Ada tanda tanya? Pertanyaan.</li>
+      <li><b>Pilih polanya.</b> Setiap jenis punya pola sendiri (lihat di bawah).</li>
+      <li><b>Mundur satu langkah.</b> Tense bergeser ke masa lampau, karena ucapan aslinya sudah lewat.</li>
+      <li><b>Ganti pelaku dan waktu.</b> Kata ganti (I → he/she), keterangan waktu/tempat (tomorrow → the next day, here → there).</li>
+    </ol>
+  </div>
+
+  <h3>Tiga pola utama</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Jenis</th><th>Pola</th><th>Contoh</th></tr>
+    <tr><td>Perintah / permintaan</td><td class="s">S + told/asked + O + (not) to + V1</td><td class="s">She told us not to do that.</td></tr>
+    <tr><td>Pernyataan</td><td class="s">S + said (that) + klausa mundur satu tense</td><td class="s">She said that she always drank coffee.</td></tr>
+    <tr><td>Pertanyaan</td><td class="s">S + asked + if/whether atau kata tanya + S + V</td><td class="s">He asked me what time the train left.</td></tr>
+  </table></div>
+
+  <h3>Perubahan keterangan waktu dan tempat</h3>
+  <p>Dipakai kalau waktu pada ucapan asli sudah tidak berlaku lagi.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Direct speech</th><th>Reported speech</th></tr>
+    <tr><td class="s">tomorrow</td><td class="s">the next/following day</td></tr>
+    <tr><td class="s">yesterday</td><td class="s">the day before</td></tr>
+    <tr><td class="s">today</td><td class="s">that day</td></tr>
+    <tr><td class="s">next week/month/year</td><td class="s">the following week/month/year</td></tr>
+    <tr><td class="s">last week/month/year</td><td class="s">the previous week/month/year</td></tr>
+    <tr><td class="s">here</td><td class="s">there</td></tr>
+    <tr><td class="s">this (waktu)</td><td class="s">that</td></tr>
+    <tr><td class="s">this/that (adjektiva)</td><td class="s">the</td></tr>
+    <tr><td class="s">now</td><td class="s">then</td></tr>
+    <tr><td class="s">tonight</td><td class="s">that night</td></tr>
+    <tr><td class="s">ago</td><td class="s">previously/before</td></tr>
+  </table></div>
+
+  <div class="box tip">
+    <h3>Tips kata ganti</h3>
+    <p>Tanyakan dua hal: <b>siapa yang bicara</b> dan <b>siapa yang melaporkan</b>. “my” milik si pembicara jadi <i>his/her</i> (kecuali pembicaranya adalah kamu sendiri). “me” di perintah biasanya jadi <i>him/her</i>, sedangkan “you” yang dilapori jadi <i>me/him/her</i> sesuai penerima.</p>
+  </div>
+  <p class="sub">Halaman dari buku yang difoto berhenti di awal Activity 7 (adjective clause), jadi latihan ini mencakup Activity 2, 4, dan 6.</p>
+</section>
+
+<!-- ============ TASK PANELS (diisi JS) ============ -->
+<section class="panel" id="p1" role="tabpanel" hidden></section>
+<section class="panel" id="p2" role="tabpanel" hidden></section>
+<section class="panel" id="p3" role="tabpanel" hidden></section>
+
+<!-- ============ PANEL 4 ============ -->
+<section class="panel" id="p4" role="tabpanel" hidden>
+  <h2>Rangkuman dan cek cepat</h2>
+
+  <h3>Kesalahan yang paling sering muncul</h3>
+  <div class="tablewrap"><table class="err">
+    <tr><th>Salah</th><th>Benar</th></tr>
+    <tr><td class="s">He told me don’t touch it.</td><td class="s">He told me not to touch it.</td></tr>
+    <tr><td class="s">She asked me do I work from home.</td><td class="s">She asked me if I worked from home.</td></tr>
+    <tr><td class="s">He asked where did she go.</td><td class="s">He asked where she went.</td></tr>
+    <tr><td class="s">She said me that she was tired.</td><td class="s">She told me that she was tired. / She said that she was tired.</td></tr>
+    <tr><td class="s">He asked me to please come.</td><td class="s">He asked me to come. (“please” dibuang)</td></tr>
+    <tr><td class="s">He said he will come tomorrow.</td><td class="s">He said he would come the next day.</td></tr>
+  </table></div>
+
+  <div class="box tip">
+    <h3>Kapan tense tidak perlu mundur?</h3>
+    <p>Kalau kata kerja pelapor masih present (<i>He says he has missed the train</i>), atau kalau isinya masih benar sekarang (<i>We explained that it is very difficult to find our house</i>). Modal <i>might, could, would, should, ought to</i> tidak berubah. Sedangkan <i>can → could</i>, <i>will → would</i>, <i>may → might</i>.</p>
+  </div>
+
+  <h3>Cek cepat</h3>
+  <div id="mcq"></div>
+</section>
+</div>
+
+<script>
+/* ---------- DATA ---------- */
+const TASKS = [
+{
+  id:'t1', tab:'Task 1', name:'Orders & Requests', act:'Activity 2', mode:'orders',
+  intro:`Perintah memakai bentuk imperatif (kata kerja saja, tanpa subjek). Permintaan biasanya memakai <i>can, could, will</i>. Keduanya dilaporkan dengan pola yang sama, hanya kata kerja pelapornya yang beda.`,
+  formulas:[`<b>Perintah:</b> S + <b>told</b> / ordered + O + (not) to + V1`,`<b>Permintaan:</b> S + <b>asked</b> + O + (not) to + V1`],
+  pair:[`“Call me back tomorrow.”`,`You told me to call you back the next day.`],
+  tips:[
+    `Pakai <b>told/ordered</b> untuk nada tegas (tanda seru, tanpa please), <b>asked</b> untuk kalimat sopan (<i>Could you…? Will you…? please</i>).`,
+    `Larangan: <i>Don’t</i> berubah menjadi <b>not to + V1</b>. Jangan tulis “don’t” lagi.`,
+    `Buang <i>please</i>, <i>could you</i>, <i>will you</i>. Yang tersisa hanya kata kerja intinya.`,
+    `Kalimat tidak langsung perintah tidak punya perubahan tense, karena sudah memakai bentuk <b>to + V1</b>. Fokus ke kata ganti dan keterangan waktu.`
+  ],
+  items:[
+   {d:`“Have some wine,” the March Hare said.`,
+    k:[`The March Hare told her to have some wine.`,`The March Hare told Alice to have some wine.`,`The March Hare invited her to have some wine.`],
+    h:`Tidak ada subjek di kalimat langsung, berarti perintah/tawaran. Pola: told + penerima + to + V1.`},
+   {d:`“Will Alice please come to the stand?” announced the White Rabbit.`,
+    k:[`The White Rabbit asked Alice to come to the stand.`,`The White Rabbit asked her to come to the stand.`],
+    h:`“Will … please …?” adalah permintaan sopan, jadi pakai asked. Kata please dibuang.`},
+   {d:`He ordered, “Go to my cottage and fetch my gloves and fan.”`,
+    k:[`He ordered me to go to his cottage and fetch his gloves and fan.`,`He ordered me to go to his cottage and to fetch his gloves and fan.`],
+    h:`“my” milik si pembicara (he), jadi menjadi his. Dua kata kerja dihubungkan dengan and.`},
+   {d:`“Play with me!” ordered the Queen.`,
+    k:[`The Queen ordered me to play with her.`,`The Queen ordered them to play with her.`],
+    h:`“me” milik si Ratu, jadi menjadi her.`},
+   {d:`“Tell me the hiding place of Peter Pan,” Hook said.`,
+    k:[`Hook told me to tell him the hiding place of Peter Pan.`,`Hook ordered me to tell him the hiding place of Peter Pan.`],
+    h:`Ada dua “tell”: told (kata kerja pelapor) lalu to tell (isi perintah). “me” menjadi him.`},
+   {d:`“Watch this, Wendy,” Peter said.`,
+    k:[`Peter told Wendy to watch that.`,`Peter told her to watch that.`,`Peter told Wendy to watch this.`],
+    h:`Nama yang dipanggil (Wendy) menjadi penerima setelah told. this → that.`},
+   {d:`“Get out of my way!” shouted the White Rabbit.`,
+    k:[`The White Rabbit told me to get out of his way.`,`The White Rabbit ordered me to get out of his way.`,`The White Rabbit shouted at me to get out of his way.`],
+    h:`Tanda seru berarti perintah tegas. “my” → his.`},
+   {d:`She said, “Don’t touch my belongings.”`,
+    k:[`She told me not to touch her belongings.`,`She told them not to touch her belongings.`],
+    h:`Larangan: Don’t → not to + V1. my → her.`},
+   {d:`“Could you call me back next week?” Jona replied.`,
+    k:[`Jona asked me to call her back the following week.`,`Jona asked me to call her back the next week.`,`Jona asked me to call her back the week after.`],
+    h:`Could you = permintaan, jadi asked. next week → the following week.`},
+   {d:`“Don’t hide yourself,” shouted Carla.`,
+    k:[`Carla told me not to hide myself.`,`Carla told him not to hide himself.`,`Carla told her not to hide herself.`],
+    h:`Don’t → not to. yourself menyesuaikan penerima (myself/himself/herself).`}
+  ]
+},
+{
+  id:'t2', tab:'Task 2', name:'Statements', act:'Activity 4', mode:'statements',
+  intro:`Saat melaporkan pernyataan, ucapan aslinya sudah lewat, jadi kata kerjanya <b>mundur satu langkah</b> ke masa lampau.`,
+  formulas:[`S + said / told + O + (that) + klausa dengan <b>tense mundur satu langkah</b>`],
+  pair:[`“I always drink coffee,” she said.`,`She said that she always drank coffee.`],
+  table:`<div class="tablewrap"><table>
+    <tr><th>Direct speech</th><th>Reported speech</th></tr>
+    <tr><td class="s">Simple present</td><td class="s">Simple past</td></tr>
+    <tr><td class="s">Present continuous</td><td class="s">Past continuous</td></tr>
+    <tr><td class="s">Simple past</td><td class="s">Past perfect</td></tr>
+    <tr><td class="s">Present perfect</td><td class="s">Past perfect</td></tr>
+    <tr><td class="s">Past perfect</td><td class="s">Past perfect (tetap)</td></tr>
+    <tr><td class="s">Present perfect continuous</td><td class="s">Past perfect continuous</td></tr>
+    <tr><td class="s">Past continuous</td><td class="s">Past perfect continuous</td></tr>
+    <tr><td class="s">will + V1</td><td class="s">would + V1</td></tr>
+    <tr><td class="s">will be + V-ing</td><td class="s">would be + V-ing</td></tr>
+  </table></div>`,
+  tips:[
+    `Bayangkan tangga: setiap tense turun satu anak tangga. <b>is → was, writes → wrote, wrote → had written, has written → had written</b>.`,
+    `Modal ikut bergeser: <b>can → could, will → would, may → might</b>. Modal <i>might, could, would, should, ought to</i> sudah di “lantai bawah”, jadi tidak berubah.`,
+    `Jangan lupa ganti kata ganti dan keterangan: <i>you → he/she/I</i>, <i>this → that</i>, <i>tomorrow → the next day</i>.`,
+    `Tidak perlu mundur kalau kata kerja pelapor masih present (<i>He says…</i>) atau isinya masih benar sekarang.`,
+    `<i>that</i> setelah said/told boleh dihilangkan. Latihan ini menerima keduanya.`
+  ],
+  items:[
+   {d:`“We can fly,” cheered Wendy, John, and Michael.`,
+    k:[`Wendy, John, and Michael cheered that they could fly.`,`Wendy, John, and Michael said that they could fly.`],
+    h:`can → could (modal bergeser). we → they.`},
+   {d:`“I’ll get you for this, Peter Pan!” Captain Hook yelled.`,
+    k:[`Captain Hook yelled that he would get Peter Pan for that.`,`Captain Hook yelled that he would get him for that.`],
+    h:`will → would. I → he. you → Peter Pan (atau him). this → that.`},
+   {d:`“This time you’ve gone too far!” Peter said to Captain Hook.`,
+    k:[`Peter told Captain Hook that that time he had gone too far.`,`Peter said to Captain Hook that that time he had gone too far.`,`Peter told Captain Hook that time he had gone too far.`],
+    h:`you’ve gone (present perfect) → he had gone (past perfect). This time → that time.`},
+   {d:`“It was such a wonderful adventure,” Wendy told her parents.`,
+    k:[`Wendy told her parents that it had been such a wonderful adventure.`,`Wendy told her parents that it was such a wonderful adventure.`],
+    h:`was (simple past) → had been (past perfect). Bentuk tetap “was” juga lazim dipakai.`},
+   {d:`“That path leads to the Mad Hatter,” said a voice.`,
+    k:[`A voice said that that path led to the Mad Hatter.`,`A voice said that the path led to the Mad Hatter.`,`A voice said that that path leads to the Mad Hatter.`],
+    h:`leads → led. “that path” boleh jadi “the path”. Bentuk present boleh jika fakta masih berlaku.`},
+   {d:`“I didn’t know it was your table,” said Alice.`,
+    k:[`Alice said that she had not known it was their table.`,`Alice said that she had not known it had been their table.`,`Alice said that she did not know it was their table.`],
+    h:`didn’t know → had not known. your → his/her/their, sesuai pemilik meja.`},
+   {d:`“You may stay if you answer my riddle,” shouted the Mad Hatter.`,
+    k:[`The Mad Hatter shouted that I might stay if I answered his riddle.`,`The Mad Hatter shouted that I could stay if I answered his riddle.`],
+    h:`may → might. answer → answered. you → I (Alice yang dilapori). my riddle → his riddle.`},
+   {d:`“You’ve been sleeping for too long,” said her sister softly.`,
+    k:[`Her sister said softly that she had been sleeping for too long.`,`Her sister said that she had been sleeping for too long.`,`Her sister softly said that she had been sleeping for too long.`],
+    h:`present perfect continuous → past perfect continuous: have been sleeping → had been sleeping.`},
+   {d:`“You’re reading again,” mumbled Alice.`,
+    k:[`Alice mumbled that she was reading again.`,`Alice mumbled that her sister was reading again.`,`Alice mumbled that you were reading again.`],
+    h:`present continuous → past continuous: are reading → was/were reading.`},
+   {d:`“I had a strange dream,” said Alice.`,
+    k:[`Alice said that she had had a strange dream.`,`Alice said that she had a strange dream.`],
+    h:`simple past → past perfect: had → had had. I → she.`}
+  ]
+},
+{
+  id:'t3', tab:'Task 3', name:'Questions', act:'Activity 6', mode:'questions',
+  intro:`Pertanyaan diubah menjadi bentuk pernyataan: tidak ada <i>do/does/did</i>, tidak ada inversi, dan tidak ada tanda tanya. Tense tetap mundur satu langkah.`,
+  formulas:[`<b>Yes/no:</b> S + asked + <b>if / whether</b> + S + V (mundur satu tense)`,`<b>Kata tanya:</b> S + asked + <b>what/where/why/who/when/how</b> + S + V (mundur satu tense)`],
+  pair:[`“Where did he go?” she asked.`,`She asked where he went.`],
+  tips:[
+    `Urutan kata dikembalikan ke <b>S + V</b>. Salah: <i>asked where did he go</i>. Benar: <i>asked where he went</i>.`,
+    `Hapus <i>do/does/did</i>. Kata kerja utama yang menanggung tense: <i>did he go → he went</i>, <i>do you work → I worked</i>.`,
+    `Yes/no question butuh <b>if</b> atau <b>whether</b> (if lebih umum). Kata tanya (wh-) tidak butuh if.`,
+    `Kata kerja pelapor bisa <i>asked, wondered, wanted to know, enquired</i>. Latihan ini menerima semuanya.`,
+    `Kalau pertanyaannya sebenarnya permintaan (<i>Could you write that down for me?</i>), laporkan seperti Task 1: <i>She asked me to write it down</i>.`
+  ],
+  items:[
+   {d:`Alice replied, “What’s the answer?”`,
+    k:[`Alice asked what the answer was.`,`Alice wondered what the answer was.`],
+    h:`Kata tanya what tetap dipakai. Urutan S + V: what the answer was. is → was.`},
+   {d:`“Have you guessed the riddle yet?” the Hatter said.`,
+    k:[`The Hatter asked if she had guessed the riddle yet.`,`The Hatter asked whether she had guessed the riddle yet.`,`The Hatter asked Alice if she had guessed the riddle yet.`],
+    h:`Yes/no → if/whether. have guessed → had guessed. you → she.`},
+   {d:`“Why is a raven like a writing desk?” Alice asked.`,
+    k:[`Alice asked why a raven was like a writing desk.`,`Alice wondered why a raven was like a writing desk.`],
+    h:`Why + S + V: why a raven was like… (is → was).`},
+   {d:`She cried, “Which way do I go?”`,
+    k:[`She asked which way she went.`,`She asked which way she should go.`],
+    h:`Buang do. I → she. go → went.`},
+   {d:`“What is the use of the book?” thought Alice.`,
+    k:[`Alice wondered what the use of the book was.`,`Alice asked herself what the use of the book was.`],
+    h:`thought → wondered (atau asked herself). is → was.`},
+   {d:`“How do we get to Neverland?” she questioned.`,
+    k:[`She asked how they got to Neverland.`,`She wondered how they got to Neverland.`],
+    h:`Buang do. we → they. get → got.`},
+   {d:`He asked, “Where can I find the magic stick?”`,
+    k:[`He asked where he could find the magic stick.`],
+    h:`can → could. I → he. Urutan: where + S + V.`},
+   {d:`“Have you sent this golden ticket to him?” she asked.`,
+    k:[`She asked if she had sent that golden ticket to him.`,`She asked whether I had sent that golden ticket to him.`,`She asked me if I had sent that golden ticket to him.`,`She asked if I had sent this golden ticket to him.`],
+    h:`Yes/no → if. have sent → had sent. this → that. Kata ganti you disesuaikan dengan siapa yang ditanya.`},
+   {d:`John asked, “Do you realize that the people are following you?”`,
+    k:[`John asked if I realized that the people were following me.`,`John asked whether I realized the people were following me.`,`John asked if she realized that the people were following her.`],
+    h:`Buang do. realize → realized. are following → were following. “that” di dalam kalimat boleh dihilangkan.`},
+   {d:`“When did you end the class?” asked Tina.`,
+    k:[`Tina asked when I had ended the class.`,`Tina asked when I ended the class.`,`Tina asked when she had ended the class.`],
+    h:`Buang did. Simple past → past perfect: had ended (bentuk simple past juga umum).`}
+  ]
+}
+];
+
+const MCQ = [
+ {q:`“Don’t hide yourself,” shouted Carla. Reported speech yang benar:`,
+  o:[`Carla told me don’t hide myself.`,`Carla told me not to hide myself.`,`Carla told me to not hiding myself.`,`Carla said me not hide myself.`],a:1,
+  w:`Larangan memakai told + O + not to + V1.`},
+ {q:`“Where did he go?” She asked ...`,
+  o:[`where did he go.`,`where he go.`,`where he went.`,`where he had go.`],a:2,
+  w:`Urutan S + V, tanpa did, dan kata kerja diberi tense.`},
+ {q:`“I have been to Spain,” he told me. Reported speech:`,
+  o:[`He told me that he has been to Spain.`,`He told me that he had been to Spain.`,`He told me that he was to Spain.`,`He told me that I had been to Spain.`],a:1,
+  w:`Present perfect → past perfect.`},
+ {q:`Modal mana yang tidak berubah dalam reported speech?`,
+  o:[`will`,`can`,`could`,`may`],a:2,
+  w:`could, might, would, should, ought to tidak berubah. will → would, can → could, may → might.`},
+ {q:`“Call me back tomorrow.” → She told me to call her back ...`,
+  o:[`tomorrow.`,`the next day.`,`yesterday.`,`the day before.`],a:1,
+  w:`tomorrow → the next/following day.`}
+];
+
+/* ---------- NORMALISASI JAWABAN ---------- */
+const RV = {
+  orders:/\b(shouted at|shouted to|yelled at|told|asked|ordered|commanded|begged|invited|requested|instructed)\b/g,
+  questions:/\b(wanted to know|asked|wondered|enquired|inquired|questioned|replied|said|cried|thought)\b/g
+};
+function norm(str, mode){
+  let s = str.toLowerCase().replace(/[’‘`]/g,"'").replace(/[“”"!?.,;:()]/g,' ');
+  s = s.replace(/\bcan't\b/g,'cannot').replace(/\bwon't\b/g,'will not')
+       .replace(/n't\b/g,' not').replace(/'ll\b/g,' will').replace(/'ve\b/g,' have')
+       .replace(/'re\b/g,' are').replace(/\bi'm\b/g,'i am');
+  s = s.replace(/'/g,'').replace(/\bwhether\b/g,'if');
+  s = s.replace(/\b(i|me|my|myself|we|us|our|ourselves|you|your|yourself|he|him|his|himself|she|her|hers|herself|they|them|their|theirs|themselves|it|its|itself)\b/g,'PR');
+  if (RV[mode]) s = s.replace(RV[mode],'RV');
+  s = s.replace(/\s+/g,' ').trim();
+  s = s.replace(/\bRV PR (?=(if|what|which|where|why|how|when|who|whose)\b)/g,'RV ');
+  const t = s.split(' ');
+  const nxt = new Set(['PR','the','a','an','that','there']);
+  for (let i=1;i<t.length-1;i++){
+    if (t[i]==='that'){ if (nxt.has(t[i+1])) t.splice(i,1); break; }
+  }
+  return t.join(' ');
+}
+
+/* ---------- STATE ---------- */
+const state = {t1:{},t2:{},t3:{}};   // idx -> 'ok' | 'self' | 'shown'
+function score(id){ return Object.values(state[id]).filter(v=>v==='ok'||v==='self').length; }
+function updateBars(){
+  let tot=0;
+  TASKS.forEach(t=>{
+    const sc=score(t.id); tot+=sc;
+    const c=document.getElementById('chip-'+t.id); if(c) c.textContent=sc+' / '+t.items.length+' benar';
+    const tb=document.querySelector('[data-tab="'+t.id+'"] small'); if(tb) tb.textContent=sc+'/'+t.items.length;
+  });
+  document.getElementById('barFill').style.width=(tot/30*100)+'%';
+  document.getElementById('barTxt').textContent=tot+' / 30 benar';
+}
+
+/* ---------- RENDER TASK ---------- */
+function keyHTML(it){
+  const rest = it.k.slice(1);
+  return `<div class="key">${it.k[0]}${rest.length?`<small>Variasi lain yang diterima: ${rest.join(' · ')}</small>`:''}</div>`;
+}
+function renderTask(t, panelId){
+  const el = document.getElementById(panelId);
+  let h = `<h2>${t.act}: ${t.name}</h2><p>${t.intro}</p>`;
+  h += `<div class="box">`+t.formulas.map(f=>`<div class="formula">${f}</div>`).join('');
+  h += `<div class="pair"><div class="d"><small>Direct speech</small>${t.pair[0]}</div><div class="r"><small>Reported speech</small>${t.pair[1]}</div></div>`;
+  if (t.table) h += `<h3>Urutan “mundur satu langkah” (dari buku)</h3>`+t.table;
+  h += `</div><div class="box tip"><h3>Tips praktis</h3><ul style="margin:0;padding-left:20px">`+t.tips.map(x=>`<li style="margin-bottom:6px">${x}</li>`).join('')+`</ul></div>`;
+  h += `<h3>Latihan</h3><p class="sub" style="margin:0 0 4px">Tulis kalimat dalam bentuk lengkap, boleh pakai singkatan (didn’t, I’ll). Kata ganti yang setara (he/she/I) diterima. Tekan Enter untuk mengecek.</p>`;
+  h += `<div class="chips"><span class="chip" id="chip-${t.id}">0 / ${t.items.length} benar</span><button class="btn ghost" data-act="reset" data-t="${t.id}">Ulangi task</button></div>`;
+  t.items.forEach((it,i)=>{
+    h += `<div class="q" id="q-${t.id}-${i}">
+      <div class="qn">Soal ${i+1}</div>
+      <div class="bubble">${it.d}</div>
+      <label class="lbl" for="a-${t.id}-${i}">Ubah menjadi reported speech</label>
+      <textarea id="a-${t.id}-${i}" data-t="${t.id}" data-i="${i}" rows="2" autocomplete="off" autocapitalize="sentences" spellcheck="false"></textarea>
+      <div class="row">
+        <button class="btn main" data-act="check" data-t="${t.id}" data-i="${i}">Cek</button>
+        <button class="btn" data-act="hint" data-t="${t.id}" data-i="${i}">Petunjuk</button>
+        <button class="btn ghost" data-act="show" data-t="${t.id}" data-i="${i}">Lihat kunci</button>
+      </div>
+      <div class="res" id="r-${t.id}-${i}" aria-live="polite"></div>
+    </div>`;
+  });
+  h += `<details class="keys"><summary>Kunci jawaban ${t.act} (semua soal)</summary><ol>`
+     + t.items.map(it=>`<li>${it.k[0]}<span>${it.d.replace(/<[^>]+>/g,'')}${it.k.length>1?' &nbsp;|&nbsp; variasi: '+it.k.slice(1).join(' · '):''}</span></li>`).join('')
+     + `</ol></details>`;
+  el.innerHTML = h;
+}
+
+/* ---------- AKSI ---------- */
+function task(id){ return TASKS.find(t=>t.id===id); }
+function setOk(tid,i,kind){
+  state[tid][i]=kind;
+  document.getElementById(`q-${tid}-${i}`).classList.toggle('ok', kind==='ok'||kind==='self');
+  updateBars();
+}
+function check(tid,i){
+  const t=task(tid), it=t.items[i];
+  const ta=document.getElementById(`a-${tid}-${i}`), r=document.getElementById(`r-${tid}-${i}`);
+  if(!ta.value.trim()){ r.innerHTML=`<div class="msg warn">Tulis jawabanmu dulu, lalu tekan Cek.</div>`; return; }
+  const u=norm(ta.value,t.mode);
+  const ok=it.k.some(k=>norm(k,t.mode)===u);
+  if(ok){
+    setOk(tid,i,'ok');
+    r.innerHTML=`<div class="msg good"><b>Benar.</b> Jawabanmu sesuai kunci.</div>`+keyHTML(it);
+  } else {
+    r.innerHTML=`<div class="msg warn"><b>Belum sama dengan kunci.</b> Cek lagi tense, kata ganti, dan urutan kata. Boleh pakai petunjuk, atau lihat kunci lalu bandingkan.</div>
+      <div class="row"><button class="btn ghost" data-act="show" data-t="${tid}" data-i="${i}">Lihat kunci</button></div>`;
+  }
+}
+function hint(tid,i){
+  const r=document.getElementById(`r-${tid}-${i}`);
+  const old=r.querySelector('.hint');
+  if(old){ old.remove(); return; }
+  r.insertAdjacentHTML('afterbegin',`<div class="hint"><b>Petunjuk:</b> ${task(tid).items[i].h}</div>`);
+}
+function show(tid,i){
+  const it=task(tid).items[i], r=document.getElementById(`r-${tid}-${i}`);
+  if(!state[tid][i]) state[tid][i]='shown';
+  const ta=document.getElementById(`a-${tid}-${i}`);
+  r.innerHTML=keyHTML(it)+`<div class="hint"><b>Kenapa begitu:</b> ${it.h}</div>`
+    + (ta.value.trim() && state[tid][i]!=='self' && state[tid][i]!=='ok'
+        ? `<div class="row"><button class="btn" data-act="self" data-t="${tid}" data-i="${i}">Jawabanku setara, tandai benar</button></div>`:'');
+  updateBars();
+}
+function reset(tid){
+  state[tid]={};
+  renderTask(task(tid),'p'+(TASKS.findIndex(t=>t.id===tid)+1));
+  updateBars();
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-act]'); if(!b) return;
+  const {act,t,i}=b.dataset;
+  if(act==='check') check(t,+i);
+  else if(act==='hint') hint(t,+i);
+  else if(act==='show') show(t,+i);
+  else if(act==='self'){ setOk(t,+i,'self'); const r=document.getElementById(`r-${t}-${i}`); r.insertAdjacentHTML('afterbegin',`<div class="msg good">Ditandai benar.</div>`); b.parentElement.remove(); }
+  else if(act==='reset') reset(t);
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Enter' && !e.shiftKey && e.target.matches('textarea[data-t]')){
+    e.preventDefault(); check(e.target.dataset.t,+e.target.dataset.i);
+  }
+});
+
+/* ---------- TAB ---------- */
+const tabDefs=[
+  {id:'p0',label:'Mulai'},
+  ...TASKS.map((t,k)=>({id:'p'+(k+1),label:t.tab+': '+t.name,key:t.id,n:t.items.length})),
+  {id:'p4',label:'Rangkuman'}
+];
+const tabsEl=document.getElementById('tabs');
+tabDefs.forEach((d,k)=>{
+  const b=document.createElement('button');
+  b.className='tab'; b.type='button'; b.setAttribute('role','tab');
+  b.setAttribute('aria-selected',k===0?'true':'false');
+  if(d.key) b.dataset.tab=d.key;
+  b.innerHTML=d.label+(d.key?` <small>0/${d.n}</small>`:'');
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected','false'));
+    b.setAttribute('aria-selected','true');
+    document.querySelectorAll('.panel').forEach(p=>p.hidden=(p.id!==d.id));
+    window.scrollTo({top:0});
+  });
+  tabsEl.appendChild(b);
+});
+
+/* ---------- MCQ ---------- */
+const mcqEl=document.getElementById('mcq');
+MCQ.forEach((m,qi)=>{
+  const d=document.createElement('div'); d.className='mcq';
+  d.innerHTML=`<p>${qi+1}. ${m.q}</p>`+m.o.map((o,oi)=>`<button type="button" class="opt" data-oi="${oi}">${o}</button>`).join('')+`<div class="why" hidden></div>`;
+  d.addEventListener('click',e=>{
+    const o=e.target.closest('.opt'); if(!o||d.dataset.done) return;
+    const oi=+o.dataset.oi;
+    if(oi===m.a){ o.classList.add('right'); d.dataset.done=1; }
+    else o.classList.add('wrong');
+    const w=d.querySelector('.why'); w.hidden=false;
+    w.textContent=(oi===m.a?'Benar. ':'Belum tepat, coba lagi. ')+(oi===m.a?m.w:'');
+  });
+  mcqEl.appendChild(d);
+});
+
+/* ---------- INIT ---------- */
+TASKS.forEach((t,k)=>renderTask(t,'p'+(k+1)));
+updateBars();
+</script>
+</body>
+</html>
